@@ -1,0 +1,26 @@
+{
+  "name": "toxin",
+  "version": "1.0.0",
+  "description": "toxin",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/templates/pages/*.pug",
+    "build": "parcel build src/templates/pages/*.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-code/toxin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/li-code/toxin/issues"
+  },
+  "homepage": "https://github.com/li-code/toxin#readme",
+  "devDependencies": {
+    "parcel-bundler": "1.12.4",
+    "pug": "2.0.4",
+    "sass": "1.26.3"
+  }
+}
