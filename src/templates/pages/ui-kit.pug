@@ -1,0 +1,60 @@
+extends ../layouts/base.pug
+
+block title
+    | UI KIT Page
+
+block main
+    -
+        var colors = [
+            { backgroundName: 'has_background_dark', title: 'Dark Shade 100%', value: '#1F2041'},
+            { backgroundName: 'has_background_dark_shade_75', title: 'Dark Shade 75%', value: '#1F2041'},
+            { backgroundName: 'has_background_dark_shade_50', title: 'Dark Shade 5%', value: '#1F2041'},
+            { backgroundName: 'has_background_dark_shade_25', title: 'Dark Shade 25%', value: '#1F2041'},
+            { backgroundName: 'has_background_dark_shade_5', title: 'Dark Shade 5%', value: '#1F2041'},
+            { backgroundName: 'has_background_primary', title: 'Purple', value: '#BC9CFF'},
+            { backgroundName: 'has_background_secondary', title: 'Green', value: '#6FCF97'}
+        ]
+
+    .container
+
+        h1.title.title_size_1
+            | UI KIT
+
+        section.color-and-types
+            h2.title.title_size_2.color-and-types__title
+                | Colors and Type
+
+            .color-and-types__row
+                .kit__colors
+                    each color in colors
+                        .kit__color
+                            .kit__color_preview(class=color.backgroundName)
+                            .kit__color_info
+                                p.kit__color_info_text <strong>#{color.title}</strong>
+                                p.kit__color_info_text= color.value
+
+                .kit__types
+                    .kit__type
+                        .kit__type_header
+                            p.kit__type_title.has_text_dark_shade_5.title_size_1 H1
+                        .kit__type_text
+                            p.title.title_size_1
+                                | This one is the sub-section or widget title
+                    .kit__type
+                        .kit__type_header
+                            p.kit__type_title.has_text_dark_shade_5.title_size_2 H2
+                        .kit__type_text
+                            p.title.title_size_2
+                                | Next one is the item title inside widgets
+                    .kit__type
+                        .kit__type_header
+                            p.kit__type_title.has_text_dark_shade_5.title_size_3 H3
+                        .kit__type_text
+                            p.title.title_size_3
+                                | This is a label or CTA text
+                    .kit__type
+                        .kit__type_header
+                            p.kit__type_title.has_text_dark_shade_5 Body
+                        .kit__type_text
+                            p
+                                | This is the body text which is used for most of the design, like paragraphs, lists, etc.

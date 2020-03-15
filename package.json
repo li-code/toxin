@@ -4,8 +4,8 @@
   "description": "toxin",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/templates/pages/*.pug",
-    "build": "parcel build src/templates/pages/*.pug"
+    "start": "parcel src/templates/pages/**/*.pug",
+    "build": "parcel build src/templates/pages/**/*.pug"
   },
   "repository": {
     "type": "git",
