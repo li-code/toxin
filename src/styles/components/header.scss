@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    max-width: 1440px;
+ 
+    @media screen and (min-width: 1200px) {
+        padding-left: calc(50% - 580px);
+        padding-right: calc(50% - 580px);
+    }
+}
+
+.header__brand {
+    margin-right: auto;
+}

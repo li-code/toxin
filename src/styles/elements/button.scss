@@ -1,0 +1,33 @@
+.button {
+    padding: 0 18px;
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+
+    color: $color-text;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    background: none;
+    border: 2px solid $color-text;
+    border-radius: 22px;
+    box-shadow: none;
+    cursor: pointer;
+
+    &--outlined-primary {
+        @extend .button;
+        color: $color-primary;
+        border-color: $color-primary;
+    }
+
+    &--primary {
+        @extend .button;
+        color: #fff;
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}

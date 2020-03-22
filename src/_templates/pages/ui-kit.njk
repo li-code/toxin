@@ -1,0 +1,61 @@
+{% extends 'layouts/default.njk' %}
+
+{% set title = 'UI KIT' %}
+{% set slug = 'ui-kit' %}
+
+{% macro kitColor(className, title, color) %}
+    <div class="kit__color">
+        <div class="kit__color_preview {{ className }}"></div>
+        <div class="kit__color_info">
+            <p class="kit__color_info_text"><strong>{{ title }}</strong></p>
+            <p class="kit__color_info_text">{{ color }}</p>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro kitTypeTitle(size, title, text) %}
+    <div class="kit__type">
+        <div class="kit__type_header">
+            <p class="kit__type_title has_text_dark_shade_25 title_size_{{ size }}">{{ title }}</p>
+        </div>
+        <div class="kit__type_text">
+            <p class="title title_size_{{ size }}">{{ text }}</p>
+        </div>
+    </div>
+{% endmacro%}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="title title_size_1">{{ title }}</h1>
+
+    <section class="color-and-types" lang="en">
+        <h2 class="title title_size_2">Colors and Type</h2>
+
+        <div class="color-and-types__row">
+            <div class="kit__colors">
+                {{ kitColor('has_background_dark', 'Dark Shade 100%', '#1F2041') }}
+                {{ kitColor('has_background_dark_shade_75', 'Dark Shade 75%', '#1F2041') }}
+                {{ kitColor('has_background_dark_shade_50', 'Dark Shade 50%', '#1F2041') }}
+                {{ kitColor('has_background_dark_shade_25', 'Dark Shade 25%', '#1F2041') }}
+                {{ kitColor('has_background_dark_shade_5', 'Dark Shade 5%', '#1F2041') }}
+                {{ kitColor('has_background_primary', 'Purple', '#BC9CFF') }}
+                {{ kitColor('has_background_secondary', 'Green', '#6FCF97') }}
+            </div>
+
+            <div class="kit__types">
+                {{ kitTypeTitle(1, 'H1', 'This one is the sub-section or widget title') }}
+                {{ kitTypeTitle(2, 'H2', 'Next one is the item title inside widgets') }}
+                {{ kitTypeTitle(3, 'H3', 'This is a label or CTA text') }}
+                <div class="kit__type">
+                    <div class="kit__type_header">
+                        <p class="kit__type_title has_text_dark_shade_25">Body</p>
+                    </div>
+                    <div class="kit__type_text"><p>This is the body text which is used for most of the design, like paragraphs, lists, etc.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

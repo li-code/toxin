@@ -1,3 +1,6 @@
 node_modules
-.cache
-dist
+.git
+/**/Thumbs.db
+/**/*.DS_Store
+
+dest

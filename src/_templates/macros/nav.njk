@@ -1,0 +1,32 @@
+{% macro navItem(activePage, item) %}
+    {% if (item.submenu) %}
+        <a href="/{{ item.slug }}" class="nav__link{% if activePage == item.slug %}--active{% endif %}">{{ item.title }}<span class="nav__link-arrow">{% include "partials/icon-arrow-down.njk" %}</span></a>
+    {% else %}
+        <a href="/{{ item.slug }}"class="nav__item{% if activePage == item.slug %}--active{% endif %}">{{ item.title }}</a>
+    {% endif %}
+{% endmacro %}
+
+{% macro active(activePage, menu) %}
+<nav class="nav">
+    {% for item in menu %}
+        {% if (item.submenu) %}
+            <div class="nav__item--dropdown">
+                {{ navItem(activePage, item) }}
+                <div class="nav__dropdown">
+                    {% for dropdown in item.submenu %}
+                        {{ navItem(activePage, dropdown) }}
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            {{ navItem(activePage, item) }}
+        {% endif %}
+    {% endfor %}
+    <div class="nav__item">
+        <button class="button--outlined-primary" type="button">Войти</button>
+    </div>
+    <div class="nav__item">
+        <button class="button--primary" type="button">Зарегистрироваться</button>
+    </div>
+</nav>
+{% endmacro %}

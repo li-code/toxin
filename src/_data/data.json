@@ -1,0 +1,33 @@
+{
+	"stylesPath": "/styles",
+	"scriptsPath": "/scripts",
+	"imagesPath": "/images",
+	"title": "Заголовок страницы",
+	"menu": [{
+		"title": "О нас",
+		"slug": "about"
+	},{
+		"title": "Услуги",
+		"slug": "services",
+		"submenu": [{
+			"title": "Услуга 1",
+			"slug": "service1"
+		},{
+			"title": "Услуга 2",
+			"slug": "service2"
+		}]
+	},{
+		"title": "Вакансии",
+		"slug": "vacancy"
+	},{
+		"title": "Новости",
+		"slug": "news"
+	},{
+		"title": "Соглашения",
+		"slug": "agreement",
+		"submenu": [{
+			"title": "Сделака",
+			"slug": "deal"
+		}]
+	}]
+}
