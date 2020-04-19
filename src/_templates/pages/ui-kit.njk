@@ -26,11 +26,11 @@
 
 {% block content %}
 
-<div class="container">
-    <h1 class="title title_size_1">{{ title }}</h1>
+<div class="container" lang="en">
+    <h1 class="title title_size_1 kit__title">{{ title }}</h1>
 
-    <section class="color-and-types" lang="en">
-        <h2 class="title title_size_2">Colors and Type</h2>
+    <section class="kit__section">
+        <h2 class="title title_size_2 kit__title">Colors and Type</h2>
 
         <div class="color-and-types__row">
             <div class="kit__colors">
@@ -54,6 +54,130 @@
                     <div class="kit__type_text"><p>This is the body text which is used for most of the design, like paragraphs, lists, etc.</p></div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="kit__section">
+        <h2 class="title title_size_2 kit__title">Form Elements</h2>
+
+        <div class="kit__row">
+            <div class="kit__column">
+                <label class="input__wrap input__wrap--kit">
+                    <input class="input" type="text" inputmode="email" placeholder="Email">
+                    <span class="input__header">
+                        <span class="input__label">Text Field</span>
+                        <span class="input__hint">Default</span>
+                    </span>
+                </label>
+
+                <label class="input__wrap input__wrap--kit">
+                    <input class="input is-hover" type="text" value="This pretty awesome">
+                    <span class="input__header">
+                        <span class="input__label">Text Field</span>
+                        <span class="input__hint">Hover / Focus</span>
+                    </span>
+                </label>
+
+                <label class="input__wrap input__wrap--kit">
+                    <input class="input_dropdown" type="text" value="Сколько гостей">
+                    <span class="input__header">
+                        <span class="input__label">Dropdown</span>
+                        <span class="input__hint">Default</span>
+                    </span>
+                </label>
+
+                <label class="input__wrap input__wrap--kit">
+                    <input class="input" type="text" placeholder="ДД.ММ.ГГГГ">
+                    <span class="input__header">
+                        <span class="input__label">Masked Text Field</span>
+                        <span class="input__hint">Default</span>
+                    </span>
+                </label>
+
+                <div class="date">
+                    <div class="date__inputs">
+                        <label class="input__wrap">
+                            <input class="input" type="text" placeholder="ДД.ММ.ГГГГ">
+                            <span class="input__header">
+                                <span class="input__label">Date Dropdown</span>
+                                <span class="input__hint">Default</span>
+                            </span>
+                        </label>
+
+                        <label class="input__wrap">
+                            <input class="input" type="text" value="19.08.2019">
+                            <span class="input__header">
+                                <span class="input__label">Date Dropdown</span>
+                                <span class="input__hint">Default</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="date-filter">
+                    <label class="input__wrap input__wrap--kit">
+                        <input class="input" type="text" placeholder="ДД.ММ.ГГГГ">
+                        <span class="input__header">
+                            <span class="input__label">Date Dropdown</span>
+                        </span>
+                    </label>
+                </div>
+
+                <label class="input__wrap input__wrap--kit">
+                    <input class="input" type="text" inputmode="email" placeholder="Email">
+                    <button class="input__button"><span class="icon--arrow-right"></span></button>
+                    <span class="input__header">
+                        <span class="input__label">Subscription Text Field</span>
+                    </span>
+                </label>
+            </div>
+            <div class="kit__column">
+                <span class="label">Checkbox Buttons</span>
+                <div class="control">
+                    <label class="checkbox"><input type="checkbox"> Можно курить</label>
+                    <label class="checkbox"><input type="checkbox" checked> Можно с питомцами</label>
+                    <label class="checkbox"><input type="checkbox" checked> Можно пригласить гостей<span class="checkbox__block">(до 10 человек)</span></label>
+                </div>
+                <span class="label">Radio Buttons</span>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="sex">
+                        Мужчина
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="sex">
+                        Женщина
+                    </label>
+                </div>
+                <span class="label">Toggle</span>
+                <div class="control">
+                    <label class="toggle"><input type="checkbox" checked> Получать спецпредложения</label>
+                    <label class="toggle"><input type="checkbox"> Получать спецпредложения</label>
+                </div>
+                <span class="label">Like Button</span>
+                <div class="control">
+                    <button class="button--like">2</button>
+                    <button class="button--like is-active">12</button>
+                </div>
+                <span class="label">Rate Button</span>
+                <div class="control">
+                    <div class="rate rate--4">
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                    </div>
+                    <div class="rate rate--5">
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                        <button class="rate__button"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="kit__column"></div>
         </div>
     </section>
 </div>
